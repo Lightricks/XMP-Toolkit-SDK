@@ -9,8 +9,8 @@ xcodebuild -project xcode/static/ios/XMPToolkitSDK.xcodeproj/ -scheme ALL_BUILD 
 cd ..
 
 mkdir -p output/
-libtool -static -o output/libXMP_simulator.a "public/libraries/ios/x86_64 arm64/Release/libXMPFilesStatic.a" "public/libraries/ios/x86_64 arm64/Release/libXMPFilesStatic.a"
-libtool -static -o output/libXMP.a "public/libraries/ios/arm64/Release/libXMPFilesStatic.a" "public/libraries/ios/arm64/Release/libXMPFilesStatic.a"
+libtool -static -o output/libXMP_simulator.a "public/libraries/ios/x86_64 arm64/Release/libXMPCoreStatic.a" "public/libraries/ios/x86_64 arm64/Release/libXMPFilesStatic.a"
+libtool -static -o output/libXMP.a "public/libraries/ios/arm64/Release/libXMPCoreStatic.a" "public/libraries/ios/arm64/Release/libXMPFilesStatic.a"
 
 mkdir -p output/ios/XMP.framework/Headers
 mv output/libXMP.a output/ios/XMP.framework/XMP
